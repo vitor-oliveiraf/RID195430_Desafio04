@@ -10,6 +10,18 @@
     #6978d1 66.67%,
     #945dd6 100%
   );
+  --linear-gradient-hover: linear-gradient(
+    180deg,
+    #945dd6 0%,
+    #13adc7 66.67%,
+    #6978d1 100%
+  );
+}
+
+[data-theme="dark"] {
+  --primary-color: #0f1624;
+  --secondary-color: #5c5c5c;
+  --background-color: #fff;
 }
 
 * {
@@ -26,6 +38,7 @@ body {
   flex-direction: column;
   min-width: 320px;
   min-height: 100vh;
+  scroll-behavior: smooth;
 }
 
 .container {

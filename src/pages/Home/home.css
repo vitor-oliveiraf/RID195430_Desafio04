@@ -1,5 +1,5 @@
 .title {
-  font-size: 2rem;
+  font-size: 1.875rem;
   font-weight: 600;
   color: var(--primary-color);
 }
@@ -7,12 +7,32 @@
 .resume-container {
   max-width: 60%;
   padding: 3rem 0 0 3rem;
+  margin-bottom: 3rem;
 }
 
 .resume {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 400;
   color: var(--secondary-color);
   text-align: justify;
   margin-bottom: 3rem;
+}
+
+.projects-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 15%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.sobre-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin-top: 3rem;
+  justify-content: center;
+  align-items: flex-start;
 }

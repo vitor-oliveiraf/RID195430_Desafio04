@@ -4,17 +4,14 @@ import { Link } from "react-router-dom";
 interface ButtonProps {
   link: string;
   text: string;
-  width: string;
-  height: string;
+  newTab?: boolean;
 }
 
-function Button({ link, text, width, height }: ButtonProps) {
+function Button({ link, text, newTab }: ButtonProps) {
   return (
     <>
-      <Link to={link}>
-        <button className="button" style={{ width, height }}>
-          {text}
-        </button>
+      <Link to={link} target={newTab ? "_blank" : "_self"}>
+        <button className="button">{text}</button>
       </Link>
     </>
   );

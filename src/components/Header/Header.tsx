@@ -1,31 +1,69 @@
 import "./Header.css";
-import linkedin from "../../assets/icon-linkedin.svg";
-import github from "../../assets/icon-github.svg";
+import linkedinDark from "../../assets/icon-linkedin-light.svg";
+import linkedinLight from "../../assets/icon-linkedin-dark.svg";
+import githubDark from "../../assets/icon-github-light.svg";
+import githubLight from "../../assets/icon-github-dark.svg";
+import lightTheme from "../../assets/light.svg";
+import darkTheme from "../../assets/dark.svg";
 import { Link } from "react-router-dom";
+import { useTheme } from "../../context/ThemeContext";
+
 function Header() {
+  const { isDarkMode, toggleTheme } = useTheme();
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <>
       <header className="container container-header">
         <nav className="header-buttons">
-          <Link className="header-button" to="/projetos">
+          <div
+            className="header-button"
+            onClick={() => scrollToSection("projetos")}
+          >
             Projetos
-          </Link>
-          <Link className="header-button" to="/tecnologias">
+          </div>
+          <div
+            className="header-button"
+            onClick={() => scrollToSection("tecnologias")}
+          >
             Tecnologias
-          </Link>
-          <Link className="header-button" to="/sobre-mim">
-            Sobre mim
-          </Link>
+          </div>
+          <div
+            className="header-button"
+            onClick={() => scrollToSection("sobre")}
+          >
+            Sobre
+          </div>
+          <button onClick={toggleTheme} className="theme-toggle">
+            <img
+              className={"header-icon"}
+              src={isDarkMode ? darkTheme : lightTheme}
+              alt="Theme"
+            />
+          </button>
         </nav>
         <div className="header-icons">
           <Link target="_blank" to="https://github.com/vitor-oliveiraf">
-            <img className={"header-icon"} src={github} alt="Github" />
+            <img
+              className={"header-icon"}
+              src={isDarkMode ? githubDark : githubLight}
+              alt="Github"
+            />
           </Link>
           <Link
             target="_blank"
             to="https://www.linkedin.com/in/vitor-oliveira-2ab261137/"
           >
-            <img className={"header-icon"} src={linkedin} alt="Linkedin" />
+            <img
+              className={"header-icon"}
+              src={isDarkMode ? linkedinDark : linkedinLight}
+              alt="Linkedin"
+            />
           </Link>
         </div>
       </header>

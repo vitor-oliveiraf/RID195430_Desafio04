@@ -10,6 +10,7 @@ import bootstrapBankImage from "../../assets/images/Bootstrap-bank-dnc.png";
 import todoListImage from "../../assets/images/Todo-list-DNC.png";
 import CardSobre from "../../components/CardSobre copy/CardSobre";
 import Footer from "../../components/Footer/Footer";
+import { useRef } from "react";
 
 const projects: Project[] = [
   {
@@ -82,6 +83,26 @@ interface Sobre {
 }
 
 function Home() {
+  const sobreContainerRef = useRef<HTMLDivElement>(null);
+
+  const scrollLeft = () => {
+    if (sobreContainerRef.current) {
+      sobreContainerRef.current.scrollBy({
+        left: -300,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  const scrollRight = () => {
+    if (sobreContainerRef.current) {
+      sobreContainerRef.current.scrollBy({
+        left: 300,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <>
       <Header />
@@ -115,7 +136,8 @@ function Home() {
         <h1 id="sobre" className="title">
           Sobre mim
         </h1>
-        <div className="sobre-container">
+        {/* <div className="sobre-wrapper"> */}
+        <div className="sobre-container" ref={sobreContainerRef}>
           {sobre.map((el: Sobre, index: number) => (
             <CardSobre
               key={index}
@@ -131,6 +153,15 @@ function Home() {
             />
           ))}
         </div>
+        <div className="sobre-navigation">
+          <button className="nav-button left" onClick={scrollLeft}>
+            ←
+          </button>
+          <button className="nav-button right" onClick={scrollRight}>
+            →
+          </button>
+        </div>
+        {/* </div> */}
       </div>
       <Footer />
     </>

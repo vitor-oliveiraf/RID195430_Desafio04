@@ -4,12 +4,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 6rem;
 }
 .sobre-card-container {
   flex: 0 0 300px;
   transition: transform 0.3s ease;
-  cursor: pointer;
   position: relative;
 }
 

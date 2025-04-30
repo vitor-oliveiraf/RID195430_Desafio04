@@ -1,3 +1,5 @@
+A minha escolha do template foi o número 2. Gostei do design do projeto e tema Dark.
+
 # Portfólio Vitor Oliveira
 
 Este é um projeto de portfólio pessoal, desenvolvido com foco em adaptabilidade para diferentes tamanhos de tela, proporcionando uma experiência otimizada para usuários em dispositivos variados.

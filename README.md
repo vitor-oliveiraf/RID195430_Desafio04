@@ -1,55 +1,39 @@
-# React + TypeScript + Vite
+# Portfólio Vitor Oliveira
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é um projeto de portfólio pessoal, desenvolvido com foco em adaptabilidade para diferentes tamanhos de tela, proporcionando uma experiência otimizada para usuários em dispositivos variados.
 
-Currently, two official plugins are available:
+## 🌐 Link para o site
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Acesse o projeto: [Portfólio Vitor Oliveira](https://seu-link-aqui.com)
 
-## Expanding the ESLint configuration
+## 🛠️ Tecnologias Utilizadas
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- React
+- TypeScript
+- Vite
+- CSS
+- Media Queries
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## 📐 Estilização e Responsividade
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+O design responsivo foi implementado utilizando as seguintes estratégias:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- Unidades de Medida Relativas: Uso de rem e % para garantir uma melhor adequação ao tamanho das telas
+- Media Queries: Adaptação para dispositivos com larguras de tela variando de 300px a 2560px
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## 📱 Testes de Compatibilidade
+
+O site foi desenvolvido e testado para garantir uma experiência consistente em diferentes dispositivos como:
+
+- Smartphones (300px e superiores)
+- Tablets
+- Monitores de alta resolução (até 2560px)
+
+## 🚀 Como Visualizar o Projeto
+
+1. Clone o repositório
+2. Instale as dependências com `npm install`
+3. Execute o projeto com `npm run dev`
+4. Abra o site em diferentes dispositivos ou redimensione a janela do navegador para observar a responsividade
+
 # RID195430_Desafio04

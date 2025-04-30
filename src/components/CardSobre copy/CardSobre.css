@@ -6,6 +6,12 @@
   justify-content: center;
   margin-bottom: 6rem;
 }
+.sobre-card-container {
+  flex: 0 0 300px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  position: relative;
+}
 
 .sobre-card-title {
   font-size: 1.25rem;
@@ -21,7 +27,7 @@
   font-weight: 400;
   color: var(--primary-color);
   text-align: justify;
-  padding: 0 1rem;
+  padding: 0 2.5rem;
 }
 
 .line-container-center {
@@ -110,4 +116,16 @@
   height: 5px;
   background-color: var(--primary-color);
   position: absolute;
+}
+
+@media (max-width: 768px) {
+  .sobre-card-container {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .sobre-card-container {
+    margin-bottom: 0px;
+  }
 }

@@ -55,3 +55,37 @@
 .theme-toggle:hover {
   transform: scale(1.1);
 }
+
+@media (max-width: 768px) {
+  .container-header {
+    display: flex;
+    justify-content: flex-end;
+    height: 180px;
+    margin-bottom: 2rem;
+  }
+
+  .header-buttons {
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .container-header {
+    display: flex;
+    justify-content: flex-end;
+    height: 180px;
+    margin-bottom: 0px;
+  }
+
+  .header-buttons {
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}

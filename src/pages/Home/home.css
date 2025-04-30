@@ -5,9 +5,9 @@
 }
 
 .resume-container {
-  max-width: 60%;
-  padding: 3rem 0 0 3rem;
+  max-width: 100%;
   margin-bottom: 3rem;
+  padding: 3rem 0 0 0;
 }
 
 .resume {
@@ -30,9 +30,46 @@
 
 .sobre-container {
   display: flex;
+  width: 100%;
   flex-direction: row;
   flex-wrap: nowrap;
-  margin-top: 3rem;
-  justify-content: center;
   align-items: flex-start;
+  justify-content: flex-start;
+  margin-top: 3rem;
+  padding: 2rem;
+  /* Adiciona scroll horizontal */
+  overflow-x: auto;
+  /* Esconde a barra de rolagem */
+  scrollbar-width: none;
+  /* Suaviza a rolagem */
+  scroll-behavior: smooth;
+  /* Suavização para navegadores WebKit */
+  -webkit-overflow-scrolling: touch;
+  /* Esconde a barra de rolagem no Internet Explorer/Edge */
+  -ms-overflow-style: none;
+  /* Adiciona posicionamento relativo para os cards */
+  position: relative;
+}
+
+.sobre-container::-webkit-scrollbar {
+  /* Esconde a barra de rolagem */
+  display: none;
+}
+
+.sobre-navigation {
+  position: relative;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .resume-container {
+    width: 60%;
+    padding: 3rem 0 0 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .sobre-container {
+    margin-top: 0px;
+  }
 }

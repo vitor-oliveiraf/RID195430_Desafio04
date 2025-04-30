@@ -39,13 +39,6 @@ function Header() {
           >
             Sobre
           </div>
-          <button onClick={toggleTheme} className="theme-toggle">
-            <img
-              className={"header-icon"}
-              src={isDarkMode ? darkTheme : lightTheme}
-              alt="Theme"
-            />
-          </button>
         </nav>
         <div className="header-icons">
           <Link target="_blank" to="https://github.com/vitor-oliveiraf">
@@ -65,6 +58,13 @@ function Header() {
               alt="Linkedin"
             />
           </Link>
+          <button onClick={toggleTheme} className="theme-toggle">
+            <img
+              className={"header-icon"}
+              src={isDarkMode ? darkTheme : lightTheme}
+              alt="Theme"
+            />
+          </button>
         </div>
       </header>
     </>

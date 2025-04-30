@@ -48,15 +48,14 @@ body {
   position: relative;
 }
 
-/* @media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
   }
-  a:hover {
-    color: #747bff;
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 12px;
   }
-  button {
-    background-color: #f9f9f9;
-  }
-} */
+}
